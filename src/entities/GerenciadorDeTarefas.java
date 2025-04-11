@@ -54,12 +54,12 @@ public class GerenciadorDeTarefas {
                     if (listaDeTarefas.get(i).id == idDaTarefa) {
                         listaDeTarefas.remove(i);
                         System.out.println("✅ Tarefa removida com sucesso!");
+                        entradaValida = true;
                         break;
                     } else {
                         System.out.println("⚠️ Nenhuma tarefa encontrada com esse ID.");
                     }
                 }
-                entradaValida = true;
             } catch (InputMismatchException e) {
                 System.out.println("Digite um Número Válido!.");
             }
@@ -88,13 +88,13 @@ public class GerenciadorDeTarefas {
                                 System.out.print("Novo Título: ");
                                 novoTitulo = sc.nextLine();
                                 listaDeTarefa.nome = novoTitulo;
-                                System.out.println("Título atualizado com sucesso!");
+                                System.out.println("✅ Título atualizado com sucesso!");
                                 break;
                             case 2:
                                 System.out.print("Nova Descrição: ");
                                 novaDescricao = sc.nextLine();
                                 listaDeTarefa.descricao = novaDescricao;
-                                System.out.println("Descrição atualizado com sucesso!");
+                                System.out.println("✅ Descrição atualizado com sucesso!");
                                 break;
                             case 3:
                                 System.out.print("Tarefa Conluída? (S/N)");
@@ -102,7 +102,7 @@ public class GerenciadorDeTarefas {
                                 if (novoEstado.equals("s")) {
                                     listaDeTarefa.concluido = true;
                                 }
-                                System.out.println("Estado atualizado com sucesso!");
+                                System.out.println("✅ Estado atualizado com sucesso!");
                                 break;
                             default:
                                 System.out.println("Opção inválida!");

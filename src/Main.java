@@ -37,6 +37,9 @@ public class Main {
                         GerenciadorDeTarefas.atualizarTarefa(listaDeTarefas);
                         GerenciadorDeTarefas.exibirTarefas(listaDeTarefas);
                         break;
+                    default:
+                        System.out.println("Opção Inválida!");
+                        break;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("❌ Entrada inválida. Digite um número!");
