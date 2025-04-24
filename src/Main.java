@@ -14,7 +14,7 @@ public class Main {
         int acao;
 
         while (true) {
-            System.out.println("0 | Nenhuma Ação \n1 | Adicionar Mais Tarefas \n2 | Remover Tarefa \n3 | Atualizar Tarefa");
+            System.out.println("0 | Encerrar Programa \n1 | Adicionar Mais Tarefas \n2 | Remover Tarefa \n3 | Atualizar Tarefa \n4 | Exibir Tarefas");
             System.out.print("Escolha uma Opção Acima: ");
             try {
                 acao = sc.nextInt();
@@ -25,16 +25,14 @@ public class Main {
                         break;
                     case 1:
                         GerenciadorDeTarefas.adicionarTarefas(listaDeTarefas);
-                        GerenciadorDeTarefas.exibirTarefas(listaDeTarefas);
                         break;
                     case 2:
-                        GerenciadorDeTarefas.exibirTarefas(listaDeTarefas);
                         GerenciadorDeTarefas.removerTarefas(listaDeTarefas);
-                        GerenciadorDeTarefas.exibirTarefas(listaDeTarefas);
                         break;
                     case 3:
-                        GerenciadorDeTarefas.exibirTarefas(listaDeTarefas);
                         GerenciadorDeTarefas.atualizarTarefa(listaDeTarefas);
+                        break;
+                    case 4:
                         GerenciadorDeTarefas.exibirTarefas(listaDeTarefas);
                         break;
                     default:
